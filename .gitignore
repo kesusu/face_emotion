@@ -1,0 +1,36 @@
+# 先排除所有
+*
+
+# 只保留代码和文档
+!*.py
+!*.md
+!docs/
+!docs/**/*
+!_board_deploy_package/
+!_board_deploy_package/**/*
+!_board_deploy_package_v17/
+!_board_deploy_package_v17/**/*
+!_board_deploy_package_v19/
+!_board_deploy_package_v19/**/*
+!from_pc/
+!from_pc/**/*.py
+!from_pc/**/*.md
+!heatmap_verify/
+!heatmap_verify/**/*.md
+!.gitignore
+
+# 排除缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 排除二进制模型文件（即使在白名单目录中也排除）
+*.joblib
+*.pkl
+*.pth
+*.npy
+*.tar
+*.zip
+
+# 排除废弃目录
+_废弃_污染数据与旧模型_待手动删除/
