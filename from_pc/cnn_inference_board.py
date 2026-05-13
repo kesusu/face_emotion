@@ -151,8 +151,9 @@ class EmotionClassifier:
         self.model.eval()
 
         params = self.model.get_num_params()
-        self.best_acc = checkpoint.get('best_acc', '?')
+        self.best_acc = checkpoint.get('best_val_acc', checkpoint.get('best_acc', '?'))
         self.model_type = checkpoint.get('model_type', 'deep')
+        self.label_order = checkpoint.get('label_order', LABEL_ORDER)
 
         print(f"[推理] 模型类型: {self.model_type.upper()} | 参数量: {params:,}")
         print(f"[推理] 训练时最佳ValAcc: {self.best_acc}%")
