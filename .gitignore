@@ -13,10 +13,13 @@
 !_board_deploy_package_v19/
 !_board_deploy_package_v19/**/*
 !from_pc/
-!from_pc/**/*.py
-!from_pc/**/*.md
+!from_pc/**/*
 !heatmap_verify/
 !heatmap_verify/**/*.md
+!archive/
+!archive/**/*
+!_board_deploy_package_v17/models/
+!_board_deploy_package_v17/models/**/*
 !.gitignore
 
 # 排除缓存
@@ -24,10 +27,7 @@ __pycache__/
 *.pyc
 *.pyo
 
-# 排除二进制模型文件（即使在白名单目录中也排除）
-*.joblib
-*.pkl
-*.pth
+# 排除大数据文件
 *.npy
 *.tar
 *.zip
